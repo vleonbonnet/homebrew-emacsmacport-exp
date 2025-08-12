@@ -13,7 +13,7 @@ end
 # emacs-plus
 
 class UrlResolver
-  HOMEBREW_EMACS_MAC_EXP_TAP_OWNER = "pkryger"
+  HOMEBREW_EMACS_MAC_EXP_TAP_OWNER = "vleonbonnet"
   HOMEBREW_EMACS_MAC_EXP_TAP_REPO = "emacsmacport-exp"
   def initialize(mode)
     tap = Tap.fetch(HOMEBREW_EMACS_MAC_EXP_TAP_OWNER, HOMEBREW_EMACS_MAC_EXP_TAP_REPO)
