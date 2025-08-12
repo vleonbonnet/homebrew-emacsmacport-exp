@@ -369,10 +369,10 @@ index 10f979d271e..00949be4c35 100644
 +  const struct frame *frame = [self emacsFrame];
 +
 +  vector_float4 currentCursor = {
-+    (float)frame->cursor_x * 2.0 / tex_w,
-+    (float)frame->cursor_y * 2.0 / tex_h,
-+    (float)frame->cursor_w * 2.0 / tex_w,
-+    (float)frame->cursor_h * 2.0 / tex_h
++    (float)frame->cursor_x * 1.0 / tex_w,
++    (float)frame->cursor_y * 1.0 / tex_h,
++    (float)frame->cursor_w * 1.0 / tex_w,
++    (float)frame->cursor_h * 1.0 / tex_h
 +  };
 +
 +  // expects top left or something
