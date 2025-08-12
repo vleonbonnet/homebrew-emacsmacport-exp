@@ -136,7 +136,7 @@ class EmacsMacExpAT30 < Formula
   if build.with? "cursor-trails"
     patch do
       url (EmacsMacExpAT30.url_resolver.patch_url "cursor-trails"), using: CopyDownloadStrategy
-      sha256 "56d2056d88c4ceadfb66fe9431ed26ddae87e6d669b6ba8dfed06eb6011c07f5"
+      sha256 "e4f637e84993227a8d0ea953d25ba2b8b62f89f2341c7de6f2ee943b314fd74e"
     end
   end
 
