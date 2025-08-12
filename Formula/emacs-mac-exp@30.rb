@@ -34,6 +34,7 @@ class EmacsMacExpAT30 < Formula
   option "without-underline-styles", "Build without support for all underline styles"
   option "without-swallow-exceptions-from-events-forwarded-to-nsapp",
          "Build without patch to swallow exceptions from events forwarded to NSApp"
+  option "with-cursor-trails", "Build with Metal cursor trails"
 
   deprecated_option "with-native-comp" => "with-native-compilation"
   deprecated_option "without-native-comp" => "without-native-compilation"
@@ -129,6 +130,13 @@ class EmacsMacExpAT30 < Formula
     patch do
       url (EmacsMacExpAT30.url_resolver.patch_url "emacs-30-add-transparent-titlebar"), using: CopyDownloadStrategy
       sha256 "28016179dbc2da4c8db814666917dc3d128bf3e84cd85fb7f4879c52d1e363a0"
+    end
+  end
+
+  if build.with? "cursor-trails"
+    patch do
+      url (EmacsMacExpAT30.url_resolver.patch_url "cursor-trails"), using: CopyDownloadStrategy
+      sha256 "56d2056d88c4ceadfb66fe9431ed26ddae87e6d669b6ba8dfed06eb6011c07f5"
     end
   end
 
