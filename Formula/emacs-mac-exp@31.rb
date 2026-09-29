@@ -14,7 +14,7 @@ class EmacsMacExpAT31 < Formula
     revision_or_branch = if ENV["HOMEBREW_EMACS_MAC_31_REVISION"]
       { revision: ENV["HOMEBREW_EMACS_MAC_31_REVISION"] }
     else
-      { branch: "emacs-mac-gnu_master_exp" }
+      { branch: "emacs-mac-31" }
     end
     url "https://github.com/jdtsmith/emacs-mac.git", **revision_or_branch
   end
@@ -66,7 +66,7 @@ class EmacsMacExpAT31 < Formula
     patch do
       url (EmacsMacExpAT31.url_resolver.patch_url "emacs-31-Swallow-exceptions-from-events-forwarded-to-NSApp"),
           using: CopyDownloadStrategy
-      sha256 "2dcef511d606332c9bd543eaa0c0358980e412a9ad1b37846f7a6adf80c86881"
+      sha256 "26bdb648418e80fa481b0796fe3891bef16467bdb33bd826d83809c06cdfaf8c"
     end
   end
 
