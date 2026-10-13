@@ -43,7 +43,8 @@ class EmacsMacExpAT30 < Formula
   deprecated_option "icon-modern" => "with-modern-icon"
 
   unless build.without? "native-compilation"
-    depends_on "gcc" => :build
+    # Native compilation links against gcc's libemutls_w at run time.
+    depends_on "gcc"
     depends_on "libgccjit"
   end
   depends_on "autoconf" => :build
